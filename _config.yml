@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: VDOT Calculator
+title: Calculadora VO2
 email: zacdblanco@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  a calculator to determine your VDOT and paces for running training
+   Uma calculadora para determinar seu VO2 e ritmos para treinamento de corrida
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://vdot.blanco.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ZacBlanco
