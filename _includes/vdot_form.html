@@ -1,31 +1,31 @@
 <form id="vdot-calc">
   <div class="row mb-2">
-    <label for="time" class="col-sm-1 col-form-label">time</label>
+    <label for="time" class="col-sm-1 col-form-label">tempo</label>
     <div class="col-sm-2">
       <input type="text" class="form-control" id="time" oninput="loadVdotsForRaceTime()" onchange="loadVdotsForRaceTime()">
     </div>
-    <label for="race" class="col-sm-2 col-form-label">race type</label>
+    <label for="race" class="col-sm-2 col-form-label">Tipo de corrida</label>
     <div class="col-sm-4">
       <select class="form-select form-control" aria-label="race selector" id="race">
         <option value="1500">1500m</option>
-        <option value="1609">mile</option>
+        <option value="1609">milha</option>
         <option value="3000">3000m</option>
-        <option value="3218">2 mile</option>
+        <option value="3218">2 milhas</option>
         <option value="5000" selected>5k</option>
-        <option value="8045">5 mile</option>
+        <option value="8045">5 milhas</option>
         <option value="10000">10k</option>
         <option value="15000">15k</option>
-        <option value="16090">10 mile</option>
+        <option value="16090">10 milhas</option>
         <option value="20000">20k</option>
-        <option value="210975">half marathon</option>
+        <option value="210975">Meia maratona</option>
         <option value="25000">25k</option>
         <option value="30000">30k</option>
-        <option value="421950">marathon</option>
+        <option value="421950">Maratona</option>
       </select>
     </div>
   </div>
   <div class="row">
-    <label for="vdot-range" class="col-sm-1 col-form-label">vdot</label>
+    <label for="vdot-range" class="col-sm-1 col-form-label">VO2</label>
     <div class="col-sm-6">
       <input type="range" class="form-range" min="30" max="85" step="1" id="vdot-range" oninput="updateVdotLabel(this.value)" onchange="updateVdotLabel(this.value)">
     </div>
@@ -37,12 +37,12 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <h5>estimated race times</h5>
+      <h5>Seus tempos estimados de corrida</h5>
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">race</th>
-            <th scope="col">time</th>
+            <th scope="col">Corrida</th>
+            <th scope="col">Tempo</th>
           </tr>
         </thead>
         <tbody>
@@ -51,7 +51,7 @@
             <td id="calc-race-pred-1500"></td>
           </tr>
           <tr>
-            <td>mile</td>
+            <td>milha</td>
             <td id="calc-race-pred-1609"></td>
           </tr>
           <tr>
@@ -59,7 +59,7 @@
             <td id="calc-race-pred-3000"></td>
           </tr>
           <tr>
-            <td>2 mile</td>
+            <td>2 milhas</td>
             <td id="calc-race-pred-3218"></td>
           </tr>
           <tr>
@@ -71,7 +71,7 @@
             <td id="calc-race-pred-8000"></td>
           </tr>
           <tr>
-            <td>5 mile</td>
+            <td>5 milhas</td>
             <td id="calc-race-pred-8045"></td>
           </tr>
           <tr>
@@ -83,7 +83,7 @@
             <td id="calc-race-pred-15000"></td>
           </tr>
           <tr>
-            <td>10 mile</td>
+            <td>10 milhas</td>
             <td id="calc-race-pred-16090"></td>
           </tr>
           <tr>
@@ -91,7 +91,7 @@
             <td id="calc-race-pred-20000"></td>
           </tr>
           <tr>
-            <td>half marathon</td>
+            <td>Meia maratona</td>
             <td id="calc-race-pred-210975"></td>
           </tr>
           <tr>
@@ -103,22 +103,22 @@
             <td id="calc-race-pred-30000"></td>
           </tr>
           <tr>
-            <td>marathon</td>
+            <td>Maratona</td>
             <td id="calc-race-pred-421950"></td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-sm-6">
-      <h5>training paces</h5>
+      <h5>Seus ritmos de treinamento</h5>
       <div class="list-group">
         <div class="list-group-item list-group-item-action">
           <div class="">
-            <h5 class="mb-1">E pace</h5>
+            <h5 class="mb-1">Milha e KM leves</h5>
           </div>
           <table class="table table-sm mb-0">
             <thead>
-              <tr><th>mile</th><th>km</th></tr>
+              <tr><th>milha</th><th>km</th></tr>
             </thead>
             <tbody>
               <tr>
@@ -130,59 +130,43 @@
         </div>
         <div class="list-group-item list-group-item-action">
           <div class="">
-            <h5 class="mb-1">M pace</h5>
+            <h5 class="mb-1">Ritmos moderados</h5>
           </div>
           <table class="table table-sm mb-0">
             <thead>
-              <tr><th>mile</th><th>km</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td id="calc-pace-M-mile"></td>
-                <td id="calc-pace-M-km"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="list-group-item list-group-item-action">
-          <div class="">
-            <h5 class="mb-1">T pace</h5>
-          </div>
-          <table class="table table-sm mb-0">
-            <thead>
-              <tr><th>distance</th><th>time</th></tr>
+              <tr><th>Distância</th><th>Tempo</th></tr>
             </thead>
             <tbody>
                 <tr><td>400m</td><td id="calc-pace-T-400"></td></tr>
                 <tr><td>800m</td><td id="calc-pace-T-800"></td></tr>
                 <tr><td>1km</td><td id="calc-pace-T-1000"></td></tr>
-                <tr><td>mile</td><td id="calc-pace-T-mile"></td></tr>
+                <tr><td>milha</td><td id="calc-pace-T-mile"></td></tr>
             </tbody>
           </table>
         </div>
         <div class="list-group-item list-group-item-action">
           <div class="">
-            <h5 class="mb-1">I pace</h5>
+            <h5 class="mb-1">Treinos ritmo forte</h5>
           </div>
           <table class="table table-sm mb-0">
             <thead>
-              <tr><th>distance</th><th>time</th></tr>
+              <tr><th>Distância</th><th>Tempo</th></tr>
             </thead>
             <tbody>
                 <tr><td>400m</td><td id="calc-pace-I-400"></td></tr>
                 <tr><td>1km</td><td id="calc-pace-I-1000"></td></tr>
                 <tr><td>1200m</td><td id="calc-pace-I-1200"></td></tr>
-                <tr><td>mile</td><td id="calc-pace-I-mile"></td></tr>
+                <tr><td>milha</td><td id="calc-pace-I-mile"></td></tr>
             </tbody>
           </table>
         </div>
         <div class="list-group-item list-group-item-action">
           <div class="">
-            <h5 class="mb-1">R pace</h5>
+            <h5 class="mb-1">Treinos intervalados</h5>
           </div>
           <table class="table table-sm mb-0">
             <thead>
-              <tr><th>distance</th><th>time</th></tr>
+              <tr><th>Distância</th><th>Tempo</th></tr>
             </thead>
             <tbody>
               <tr><td>200m</td><td id="calc-pace-R-200"></td></tr>
