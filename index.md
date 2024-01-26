@@ -3,7 +3,7 @@ layout: home
 ---
 
 
-**Instructions**: use the form to input a recent race performance or adjust the
-VDOT slider manually to view the training paces for your current fitness level
+**Instruções**: Use o formulário para inserir um desempenho de corrida recente ou ajuste o controle deslizante VO2 manualmente para visualizar os ritmos de treinamento para seu nível de condicionamento físico atual.
 
+ Desenvolvido por Gabriel Vinicius.
 {% include vdot_form.html %}
